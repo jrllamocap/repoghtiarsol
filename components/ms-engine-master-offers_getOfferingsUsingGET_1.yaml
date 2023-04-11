@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: getOfferingsUsingGET_1
+  description: getOfferingsUsingGET_1
+  namespace: ms-engine-master-offers
+spec:
+  type: service
+  lifecycle: production
+  owner: TDP
+  system: default/Motor-de-Ofertas
+  subcomponentOf: motor-de-ofertas/ms-engine-master-offers
+  providesApis:
+  - ms-engine-master-offers/getOfferingsUsingGET_1
+  consumesApis:
+  - ProducInventory/products

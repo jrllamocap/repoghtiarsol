@@ -1,0 +1,62 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: example-components
+  description: A collection of all Backstage example components
+spec:
+  targets:
+    - ./components/DAAS_CheckCustomerMigratedFixed.yaml
+    - ./components/CheckCustomerMigratedFixed_checkCustomerMigrated.yaml
+    - ./components/DAAS_ProductOrdering-RetrieveProductOrdersBindingQSService.yaml
+    - ./components/ProductOrdering-RetrieveProductOrdersBindingQSService_retrieveProductOrders.yaml
+    - ./components/ESB-BSS_OrderServicesService.yaml
+    - ./components/OrderServicesService_retrieveCommitmentPenalty.yaml
+    - ./components/ESB-BSS_ProducInventory.yaml
+    - ./components/ProducInventory_products.yaml
+    - ./components/ESB-BSS_BalanceManagmentService.yaml
+    - ./components/BalanceManagmentService_getAccountBalance.yaml
+    - ./components/Motor-de-Ofertas_ms-engine-devices.yaml
+    - ./components/ms-engine-devices_DevicesApiController.yaml
+    - ./components/Motor-de-Ofertas_ms-engine-argumentative-suggested-fi.yaml
+    - ./components/ms-engine-argumentative-suggested-fi_OfferingsApiController.yaml
+    - ./components/Motor-de-Ofertas_ms-engine-retentionoffers-mt.yaml
+    - ./components/ms-engine-retentionoffers-mt_OfferingsController.yaml
+    - ./components/Motor-de-Ofertas_ms-engine-sva.yaml
+    - ./components/ms-engine-sva_getOfferingsUsingGET.yaml
+    - ./components/Motor-de-Ofertas_ms-engine-suggestedoffers-mt.yaml
+    - ./components/ms-engine-suggestedoffers-mt_getOfferingsUsingGET.yaml
+    - ./components/Motor-de-Ofertas_ms-engine-elegibleoffers-mt.yaml
+    - ./components/ms-engine-elegibleoffers-mt_getOfferingsUsingGET.yaml
+    - ./components/Motor-de-Ofertas_ms-engine-master-offers.yaml
+    - ./components/ms-engine-master-offers_getOfferingsUsingGET.yaml
+    - ./components/ms-engine-master-offers_getOfferingsUsingGET_1.yaml
+    - ./components/Motor-de-Ofertas_ms-engine-retentionoffers-mo.yaml
+    - ./components/ms-engine-retentionoffers-mo_OfferingsController.yaml
+    - ./components/Motor-de-Ofertas_ms-engine-suggestedoffers-mo.yaml
+    - ./components/ms-engine-suggestedoffers-mo_getOfferingsUsingGET.yaml
+    - ./components/Motor-de-Ofertas_ms-engine-elegibleoffers-mo.yaml
+    - ./components/ms-engine-elegibleoffers-mo_getOfferingsUsingGET.yaml
+    - ./components/Motor-de-Ofertas_ms-engine-retentionoffers-fi.yaml
+    - ./components/ms-engine-retentionoffers-fi_OfferingsController.yaml
+    - ./components/Motor-de-Ofertas_ms-engine-suggestedoffers-fi.yaml
+    - ./components/ms-engine-suggestedoffers-fi_getOfferingsUsingGET.yaml
+    - ./components/Motor-de-Ofertas_ms-engine-elegibleoffers-fi.yaml
+    - ./components/ms-engine-elegibleoffers-fi_getOfferingsUsingGET.yaml
+    - ./components/Motor-de-Ofertas_ms-engine-penalty-inquiry.yaml
+    - ./components/ms-engine-penalty-inquiry_retrieveCommitmentPenalties.yaml
+    - ./components/Motor-de-Ofertas_ms-engine-offers.yaml
+    - ./components/ms-engine-offers_getOfferingsUsingGET.yaml
+    - ./components/API-MANAGEMENT-DMZ_ProductCatalogManagement.yaml
+    - ./components/ProductCatalogManagement_getOfferings.yaml
+    - ./components/DITO_ms-fesimple-productoffering.yaml
+    - ./components/DITO_ms-fesimple-productoffering_getOfferings.yaml
+    - ./components/ESB-LEGADOS-FM_ProductCatalogManagement-Frontend.yaml
+    - ./components/ProductCatalogManagement-Frontend_getOfferings.yaml
+    - ./components/AKS-INTEGRACION_ProductCatalogManagement.yaml
+    - ./components/AKS-INTEGRACION_ProductCatalogManagement_getOfferings.yaml
+    - ./components/API-MANAGEMENT-AZURE_ProductCatalogManagement.yaml
+    - ./components/API-MANAGEMENT-AZURE_ProductCatalogManagement_getOfferings.yaml
+    - ./components/MI-MOVISTAR_app-mi-movistar.yaml
+    - ./components/API-MANAGEMENT-AZURE_Product-Catalog-Management-FE.yaml
+    - ./components/API-MANAGEMENT-AZURE_Product-Catalog-Management-FE_getOfferings.yaml
+    - ./components/DITO_ng-fesimple-webconvergente.yaml

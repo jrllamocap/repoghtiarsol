@@ -1,0 +1,372 @@
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-system
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: Dito
+spec:
+  owner: guests
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-system
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: Api-Management-Azure
+spec:
+  owner: guests
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-system
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: Api-Management-DMZ
+spec:
+  owner: guests
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-system
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: Integration-OCP
+spec:
+  owner: guests
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-system
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: Motor-de-Ofertas
+spec:
+  owner: guests
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ms-fesimple-productoffering..DITO
+spec:
+  type: service
+  lifecycle: production
+  owner: guests
+  system: Dito
+  providesApis: [v1_offerings..ms-fesimple-productoffering..DITO]
+  consumesApis: [v4_offerings..Product-Offering-DMZ..AMDZ]
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ms-fesimple-bussinesparameters..DITO
+spec:
+  type: service
+  lifecycle: production
+  owner: guests
+  system: Dito
+  providesApis: [bussinesparameters_v2..ms-fesimple-bussinesparameters..DITO]
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ms-fesimple-productinventory..DITO
+spec:
+  type: service
+  lifecycle: production
+  owner: guests
+  system: Dito
+  providesApis: [products_productsCorporate..ms-fesimple-productinventory..DITO,v1_products..ms-fesimple-productinventory..DITO,products_getProducts..ms-fesimple-productinventory..DITO]
+  consumesApis: [v2_products..Product-Inventory-DMZ..AMDZ,v4_products..Product-Inventory-DMZ..AMDZ,v4_productsCorporate..Product-Inventory-DMZ..AMDZ]
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ng-fesimple-webconvergente..DITO
+spec:
+  type: website
+  lifecycle: production
+  owner: guests
+  system: Dito
+  consumesApis: [v1_offerings..Product-Offering-FE..AMAZ,v2_..Product-Inventory-FE..AMAZ,v2_getProducts..Product-Inventory-FE..AMAZ,products_productsCorporate..Product-Inventory-FE..AMAZ,bussinesparameters_v2..Business-Parameter-FE..AMAZ]
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: Product-Offering-FE..AMAZ
+spec:
+  type: service
+  lifecycle: production
+  owner: guests
+  system: Api-Management-Azure
+  providesApis: [v1_offerings..Product-Offering-FE..AMAZ]
+  consumesApis: [v1_offerings..ms-fesimple-productoffering..DITO]
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: Business-Parameter-FE..AMAZ
+spec:
+  type: service
+  lifecycle: production
+  owner: guests
+  system: Api-Management-Azure
+  providesApis: [bussinesparameters_v2..Business-Parameter-FE..AMAZ]
+  consumesApis: [bussinesparameters_v2..ms-fesimple-bussinesparameters..DITO]
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: Product-Inventory-FE..AMAZ
+spec:
+  type: service
+  lifecycle: production
+  owner: guests
+  system: Api-Management-Azure
+  providesApis: [products_productsCorporate..Product-Inventory-FE..AMAZ,v2_..Product-Inventory-FE..AMAZ,v2_getProducts..Product-Inventory-FE..AMAZ]
+  consumesApis: [v1_products..ms-fesimple-productinventory..DITO,products_getProducts..ms-fesimple-productinventory..DITO,products_productsCorporate..ms-fesimple-productinventory..DITO]
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: Product-Inventory-DMZ..AMDZ
+spec:
+  type: service
+  lifecycle: production
+  owner: guests
+  system: Api-Management-DMZ
+  providesApis: [v4_productsCorporate..Product-Inventory-DMZ..AMDZ,v2_products..Product-Inventory-DMZ..AMDZ,v4_products..Product-Inventory-DMZ..AMDZ]
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: Product-Offering-DMZ..AMDZ
+spec:
+  type: service
+  lifecycle: production
+  owner: guests
+  system: Api-Management-DMZ
+  providesApis: [v4_offerings..Product-Offering-DMZ..AMDZ]
+  consumesApis: [v4_offerings..Offerings..INOC]
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: Offerings..MOOF
+spec:
+  type: service
+  lifecycle: production
+  owner: guests
+  system: Motor-de-Ofertas
+  providesApis: [offerings..Offerings..MOOF]
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: Offerings..INOC
+spec:
+  type: service
+  lifecycle: production
+  owner: guests
+  system: Integration-OCP
+  providesApis: [v4_offerings..Offerings..INOC]
+  consumesApis: [offerings..Offerings..MOOF]
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-api
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: v4_productsCorporate..Product-Inventory-DMZ..AMDZ
+spec:
+  type: grpc
+  lifecycle: production
+  owner: guests
+  system: Api-Management-DMZ
+  definition: none
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-api
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: v1_offerings..ms-fesimple-productoffering..DITO
+spec:
+  type: grpc
+  lifecycle: production
+  owner: guests
+  system: Dito
+  definition: none
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-api
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: bussinesparameters_v2..ms-fesimple-bussinesparameters..DITO
+spec:
+  type: grpc
+  lifecycle: production
+  owner: guests
+  system: Dito
+  definition: none
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-api
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: products_productsCorporate..ms-fesimple-productinventory..DITO
+spec:
+  type: grpc
+  lifecycle: production
+  owner: guests
+  system: Dito
+  definition: none
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-api
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: v1_products..ms-fesimple-productinventory..DITO
+spec:
+  type: grpc
+  lifecycle: production
+  owner: guests
+  system: Dito
+  definition: none
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-api
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: products_getProducts..ms-fesimple-productinventory..DITO
+spec:
+  type: grpc
+  lifecycle: production
+  owner: guests
+  system: Dito
+  definition: none
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-api
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: v1_offerings..Product-Offering-FE..AMAZ
+spec:
+  type: grpc
+  lifecycle: production
+  owner: guests
+  system: Api-Management-Azure
+  definition: none
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-api
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: bussinesparameters_v2..Business-Parameter-FE..AMAZ
+spec:
+  type: grpc
+  lifecycle: production
+  owner: guests
+  system: Api-Management-Azure
+  definition: none
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-api
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: products_productsCorporate..Product-Inventory-FE..AMAZ
+spec:
+  type: grpc
+  lifecycle: production
+  owner: guests
+  system: Api-Management-Azure
+  definition: none
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-api
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: v2_..Product-Inventory-FE..AMAZ
+spec:
+  type: grpc
+  lifecycle: production
+  owner: guests
+  system: Api-Management-Azure
+  definition: none
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-api
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: v2_getProducts..Product-Inventory-FE..AMAZ
+spec:
+  type: grpc
+  lifecycle: production
+  owner: guests
+  system: Api-Management-Azure
+  definition: none
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-api
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: v2_products..Product-Inventory-DMZ..AMDZ
+spec:
+  type: grpc
+  lifecycle: production
+  owner: guests
+  system: Api-Management-DMZ
+  definition: none
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-api
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: v4_products..Product-Inventory-DMZ..AMDZ
+spec:
+  type: grpc
+  lifecycle: production
+  owner: guests
+  system: Api-Management-DMZ
+  definition: none
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-api
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: v4_offerings..Product-Offering-DMZ..AMDZ
+spec:
+  type: grpc
+  lifecycle: production
+  owner: guests
+  system: Api-Management-DMZ
+  definition: none
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-api
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: offerings..Offerings..MOOF
+spec:
+  type: grpc
+  lifecycle: production
+  owner: guests
+  system: Motor-de-Ofertas
+  definition: none
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-api
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: v4_offerings..Offerings..INOC
+spec:
+  type: grpc
+  lifecycle: production
+  owner: guests
+  system: Integration-OCP
+  definition: none
+---

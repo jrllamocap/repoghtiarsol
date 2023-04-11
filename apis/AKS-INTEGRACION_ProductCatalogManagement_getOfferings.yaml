@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: getOfferings
+  description: getOfferings
+  namespace: aksint-productcatalogmanagement
+spec:
+  type: Info
+  lifecycle: production
+  owner: TDP
+  system: default/AKS-INTEGRACION
+  definition: "| \n\t\tpath: [GET] /offerings"

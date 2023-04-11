@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: retrieveCommitmentPenalty
+  description: retrieveCommitmentPenalty
+  namespace: orderservicesservice
+spec:
+  type: Info
+  lifecycle: production
+  owner: TDP
+  system: default/ESB-BSS
+  definition: "| \n\t\tpath: http://esbprodom.simple.gp.inet/CustomerOrderManagement/OrderServices/V1"

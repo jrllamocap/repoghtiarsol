@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: getOfferings
+  description: getOfferings
+  namespace: dito-ms-fesimple-productoffering
+spec:
+  type: Info
+  lifecycle: production
+  owner: TDP
+  system: default/DITO
+  definition: "| \n\t\tpath: [GET] /fesimple/v1/offerings"

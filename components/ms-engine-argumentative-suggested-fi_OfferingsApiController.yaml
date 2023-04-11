@@ -1,0 +1,18 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: OfferingsApiController
+  description: OfferingsApiController
+  namespace: ms-engine-argumentative-suggested-fi
+spec:
+  type: service
+  lifecycle: production
+  owner: TDP
+  system: default/Motor-de-Ofertas
+  subcomponentOf: motor-de-ofertas/ms-engine-argumentative-suggested-fi
+  providesApis:
+  - ms-engine-argumentative-suggested-fi/OfferingsApiController
+  consumesApis:
+  - CheckCustomerMigratedFixed/checkCustomerMigrated
+  - ProducInventory/products
+  - ProductOrdering-RetrieveProductOrdersBindingQSService/retrieveProductOrders

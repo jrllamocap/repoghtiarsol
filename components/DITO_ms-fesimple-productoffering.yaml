@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ms-fesimple-productoffering
+  description: ms-fesimple-productoffering
+  namespace: dito
+spec:
+  type: service
+  lifecycle: production
+  owner: TDP
+  system: default/DITO

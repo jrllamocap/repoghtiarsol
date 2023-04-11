@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: DAAS
+  description: DAAS
+spec:
+  type: System
+  lifecycle: production
+  owner: TDP

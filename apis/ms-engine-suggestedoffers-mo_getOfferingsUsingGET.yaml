@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: getOfferingsUsingGET
+  description: getOfferingsUsingGET
+  namespace: ms-engine-suggestedoffers-mo
+spec:
+  type: Info
+  lifecycle: production
+  owner: TDP
+  system: default/Motor-de-Ofertas
+  definition: "| \n\t\tpath: http://shaka-suggestedoffers-mo-v1-engine.apps.ocpprod.gp.inet/offerings"

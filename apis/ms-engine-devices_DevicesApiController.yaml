@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: DevicesApiController
+  description: DevicesApiController
+  namespace: ms-engine-devices
+spec:
+  type: Info
+  lifecycle: production
+  owner: TDP
+  system: default/Motor-de-Ofertas
+  definition: "| \n\t\tpath: [GET] /devices"

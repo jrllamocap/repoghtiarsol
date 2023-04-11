@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: checkCustomerMigrated
+  description: checkCustomerMigrated
+  namespace: checkcustomermigratedfixed
+spec:
+  type: Info
+  lifecycle: production
+  owner: TDP
+  system: default/DAAS
+  definition: "| \n\t\tpath: http://10.4.43.93:8889/checkcustomer/ws/v1"

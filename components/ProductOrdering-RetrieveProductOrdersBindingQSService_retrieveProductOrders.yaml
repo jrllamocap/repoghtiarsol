@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: retrieveProductOrders
+  description: retrieveProductOrders
+  namespace: productordering-retrieveproductordersbindingqsservice
+spec:
+  type: service
+  lifecycle: production
+  owner: TDP
+  system: default/DAAS
+  subcomponentOf: daas/ProductOrdering-RetrieveProductOrdersBindingQSService
+  providesApis:
+  - ProductOrdering-RetrieveProductOrdersBindingQSService/retrieveProductOrders
+  consumesApis: []

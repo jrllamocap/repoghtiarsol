@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: OfferingsController
+  description: OfferingsController
+  namespace: ms-engine-retentionoffers-fi
+spec:
+  type: Info
+  lifecycle: production
+  owner: TDP
+  system: default/Motor-de-Ofertas
+  definition: "| \n\t\tpath: [GET] /offerings"

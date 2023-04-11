@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: ESB-LEGADOS-FM
+  description: ESB-LEGADOS-FM
+spec:
+  type: System
+  lifecycle: production
+  owner: TDP

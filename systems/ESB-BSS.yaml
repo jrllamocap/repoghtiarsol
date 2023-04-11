@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: ESB-BSS
+  description: ESB-BSS
+spec:
+  type: System
+  lifecycle: production
+  owner: TDP

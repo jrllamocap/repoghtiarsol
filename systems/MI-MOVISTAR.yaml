@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: MI-MOVISTAR
+  description: MI-MOVISTAR
+spec:
+  type: System
+  lifecycle: production
+  owner: TDP

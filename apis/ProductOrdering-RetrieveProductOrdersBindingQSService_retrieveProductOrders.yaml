@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: retrieveProductOrders
+  description: retrieveProductOrders
+  namespace: productordering-retrieveproductordersbindingqsservice
+spec:
+  type: Info
+  lifecycle: production
+  owner: TDP
+  system: default/DAAS
+  definition: "| \n\t\tpath: http://10.4.67.69:8071/ProductOrdering-RetrieveProductOrders_v2_HADA_FIJA/ProductOrdering-RetrieveProductOrders/ProxyServices/ProductOrdering-RetrieveProductOrdersSOAP_v2"

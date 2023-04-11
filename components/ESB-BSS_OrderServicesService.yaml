@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: OrderServicesService
+  description: OrderServicesService
+  namespace: esb-bss
+spec:
+  type: service
+  lifecycle: production
+  owner: TDP
+  system: default/ESB-BSS

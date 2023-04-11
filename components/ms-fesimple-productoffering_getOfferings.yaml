@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: getOfferings
+  description: getOfferings
+  namespace: ms-fesimple-productoffering
+spec:
+  type: service
+  lifecycle: production
+  owner: TDP
+  system: default/DITO
+  subcomponentOf: dito/ms-fesimple-productoffering
+  providesApis:
+  - ms-fesimple-productoffering/getOfferings
+  consumesApis:
+  - productcatalogmanagement/getOfferings

@@ -1,0 +1,22 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: getOfferingsUsingGET
+  description: getOfferingsUsingGET
+  namespace: motor-ms-engine-offers
+spec:
+  type: service
+  lifecycle: production
+  owner: TDP
+  system: default/Motor-de-Ofertas
+  subcomponentOf: motor/ms-engine-offers
+  providesApis:
+  - motor-ms-engine-offers/getOfferingsUsingGET
+  consumesApis:
+  - ms-engine-elegibleoffers-fi/getOfferingsUsingGET
+  - ms-engine-elegibleoffers-mo/getOfferingsUsingGET
+  - ms-engine-elegibleoffers-mt/getOfferingsUsingGET
+  - ms-engine-suggestedoffers-fi/getOfferingsUsingGET
+  - ms-engine-suggestedoffers-mo/getOfferingsUsingGET
+  - ms-engine-suggestedoffers-mt/getOfferingsUsingGET
+  - ms-engine-sva/getOfferingsUsingGET

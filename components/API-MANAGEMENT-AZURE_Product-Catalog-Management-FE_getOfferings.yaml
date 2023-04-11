@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: getOfferings
+  description: getOfferings
+  namespace: apim-az-product-catalog-management-fe
+spec:
+  type: service
+  lifecycle: production
+  owner: TDP
+  system: default/API-MANAGEMENT-AZURE
+  subcomponentOf: apim-az/Product-Catalog-Management-FE
+  providesApis:
+  - apim-az-product-catalog-management-fe/getOfferings
+  consumesApis:
+  - dito-ms-fesimple-productoffering/getOfferings

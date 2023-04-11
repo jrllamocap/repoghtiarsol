@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ng-fesimple-webconvergente
+  description: ng-fesimple-webconvergente
+  namespace: dito
+spec:
+  type: service
+  lifecycle: production
+  owner: TDP
+  system: default/DITO
+  consumesApis:
+  - apim-az-product-catalog-management-fe/getOfferings

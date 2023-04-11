@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: getOfferings
+  title: getOfferings
+  description: getOfferings
+  namespace: ocp-integracion-productcatalogmanagement-frontend
+spec:
+  type: service
+  lifecycle: production
+  owner: TDP
+  system: default/OCP-INTEGRACION
+  subcomponentOf: ocp-integracion/ProductCatalogManagement-Frontend
+  providesApis:
+  - ocp-integracion-productcatalogmanagement-frontend/getOfferings
+  consumesApis:
+  - ms-engine-offers/getOfferingsUsingGET

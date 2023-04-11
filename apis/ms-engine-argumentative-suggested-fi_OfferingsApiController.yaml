@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: OfferingsApiController
+  description: OfferingsApiController
+  namespace: ms-engine-argumentative-suggested-fi
+spec:
+  type: Info
+  lifecycle: production
+  owner: TDP
+  system: default/Motor-de-Ofertas
+  definition: "| \n\t\tpath: [GET] /ri/productCatalog/v2/offerings"

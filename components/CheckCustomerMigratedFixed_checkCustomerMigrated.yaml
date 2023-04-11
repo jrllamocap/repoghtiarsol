@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: checkCustomerMigrated
+  description: checkCustomerMigrated
+  namespace: checkcustomermigratedfixed
+spec:
+  type: service
+  lifecycle: production
+  owner: TDP
+  system: default/DAAS
+  subcomponentOf: daas/CheckCustomerMigratedFixed
+  providesApis:
+  - CheckCustomerMigratedFixed/checkCustomerMigrated
+  consumesApis: []

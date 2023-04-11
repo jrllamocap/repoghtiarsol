@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: app-mi-movistar
+  description: app-mi-movistar
+  namespace: mi-movistar
+spec:
+  type: service
+  lifecycle: production
+  owner: TDP
+  system: default/MI-MOVISTAR
+  consumesApis:
+  - apim-az-productcatalogmanagement/getOfferings

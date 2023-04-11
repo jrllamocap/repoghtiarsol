@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: getOfferingsUsingGET
+  description: getOfferingsUsingGET
+  namespace: ms-engine-elegibleoffers-mo
+spec:
+  type: service
+  lifecycle: production
+  owner: TDP
+  system: default/Motor-de-Ofertas
+  subcomponentOf: motor-de-ofertas/ms-engine-elegibleoffers-mo
+  providesApis:
+  - ms-engine-elegibleoffers-mo/getOfferingsUsingGET
+  consumesApis:
+  - ms-engine-master-offers/getOfferingsUsingGET_1
+  - OrderServicesService/retrieveCommitmentPenalty

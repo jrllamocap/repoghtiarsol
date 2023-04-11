@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: OCP-INTEGRACION
+  description: OCP-INTEGRACION
+spec:
+  type: System
+  lifecycle: production
+  owner: TDP

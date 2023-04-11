@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: example-systems
+  description: A collection of all Backstage example systems
+spec:
+  targets:
+    - ./systems/DAAS.yaml
+    - ./systems/ESB-BSS.yaml
+    - ./systems/Motor-de-Ofertas.yaml
+    - ./systems/API-MANAGEMENT-DMZ.yaml
+    - ./systems/DITO.yaml
+    - ./systems/ESB-LEGADOS-FM.yaml
+    - ./systems/AKS-INTEGRACION.yaml
+    - ./systems/API-MANAGEMENT-AZURE.yaml
+    - ./systems/MI-MOVISTAR.yaml

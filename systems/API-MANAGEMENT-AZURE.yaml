@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: API-MANAGEMENT-AZURE
+  description: API-MANAGEMENT-AZURE
+spec:
+  type: System
+  lifecycle: production
+  owner: TDP

@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ms-engine-suggestedoffers-mo
+  description: ms-engine-suggestedoffers-mo
+  namespace: motor-de-ofertas
+spec:
+  type: service
+  lifecycle: production
+  owner: TDP
+  system: default/Motor-de-Ofertas

@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: OfferingsController
+  description: OfferingsController
+  namespace: ms-engine-retentionoffers-mo
+spec:
+  type: service
+  lifecycle: production
+  owner: TDP
+  system: default/Motor-de-Ofertas
+  subcomponentOf: motor-de-ofertas/ms-engine-retentionoffers-mo
+  providesApis:
+  - ms-engine-retentionoffers-mo/OfferingsController
+  consumesApis:
+  - ProducInventory/products
+  - ms-engine-master-offers/getOfferingsUsingGET_1

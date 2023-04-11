@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: getOfferings
+  title: getOfferings
+  description: getOfferings
+  namespace: ocp-integracion-productcatalogmanagement-frontend
+spec:
+  type: Info
+  lifecycle: production
+  owner: TDP
+  system: default/OCP-INTEGRACION
+  definition: "| \n\t\tpath: [GET] /productCatalog/v2"

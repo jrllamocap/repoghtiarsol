@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: products
+  description: products
+  namespace: producinventory
+spec:
+  type: service
+  lifecycle: production
+  owner: TDP
+  system: default/ESB-BSS
+  subcomponentOf: esb-bss/ProducInventory
+  providesApis:
+  - ProducInventory/products
+  consumesApis: []

@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: getOfferings
+  description: getOfferings
+  namespace: esb-fm-productcatalogmanagement-frontend
+spec:
+  type: service
+  lifecycle: production
+  owner: TDP
+  system: default/ESB-LEGADOS-FM
+  subcomponentOf: esb-fm/ProductCatalogManagement-Frontend
+  providesApis:
+  - esb-fm-ProductCatalogManagement-Frontend/getOfferings
+  consumesApis:
+  - motor-ms-engine-offers/getOfferingsUsingGET

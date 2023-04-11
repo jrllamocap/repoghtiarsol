@@ -1,0 +1,34 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: example-apis
+  description: A collection of all Backstage example APIs
+spec:
+  targets:
+    - ./apis/CheckCustomerMigratedFixed_checkCustomerMigrated.yaml
+    - ./apis/ProductOrdering-RetrieveProductOrdersBindingQSService_retrieveProductOrders.yaml
+    - ./apis/OrderServicesService_retrieveCommitmentPenalty.yaml
+    - ./apis/ProducInventory_products.yaml
+    - ./apis/BalanceManagmentService_getAccountBalance.yaml
+    - ./apis/ms-engine-devices_DevicesApiController.yaml
+    - ./apis/ms-engine-argumentative-suggested-fi_OfferingsApiController.yaml
+    - ./apis/ms-engine-retentionoffers-mt_OfferingsController.yaml
+    - ./apis/ms-engine-sva_getOfferingsUsingGET.yaml
+    - ./apis/ms-engine-suggestedoffers-mt_getOfferingsUsingGET.yaml
+    - ./apis/ms-engine-elegibleoffers-mt_getOfferingsUsingGET.yaml
+    - ./apis/ms-engine-master-offers_getOfferingsUsingGET.yaml
+    - ./apis/ms-engine-master-offers_getOfferingsUsingGET_1.yaml
+    - ./apis/ms-engine-retentionoffers-mo_OfferingsController.yaml
+    - ./apis/ms-engine-suggestedoffers-mo_getOfferingsUsingGET.yaml
+    - ./apis/ms-engine-elegibleoffers-mo_getOfferingsUsingGET.yaml
+    - ./apis/ms-engine-retentionoffers-fi_OfferingsController.yaml
+    - ./apis/ms-engine-suggestedoffers-fi_getOfferingsUsingGET.yaml
+    - ./apis/ms-engine-elegibleoffers-fi_getOfferingsUsingGET.yaml
+    - ./apis/ms-engine-penalty-inquiry_retrieveCommitmentPenalties.yaml
+    - ./apis/ms-engine-offers_getOfferingsUsingGET.yaml
+    - ./apis/ProductCatalogManagement_getOfferings.yaml
+    - ./apis/DITO_ms-fesimple-productoffering_getOfferings.yaml
+    - ./apis/ProductCatalogManagement-Frontend_getOfferings.yaml
+    - ./apis/AKS-INTEGRACION_ProductCatalogManagement_getOfferings.yaml
+    - ./apis/API-MANAGEMENT-AZURE_ProductCatalogManagement_getOfferings.yaml
+    - ./apis/API-MANAGEMENT-AZURE_Product-Catalog-Management-FE_getOfferings.yaml

@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: Motor-de-Ofertas
+  description: Motor-de-Ofertas
+spec:
+  type: System
+  lifecycle: production
+  owner: TDP

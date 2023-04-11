@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: products
+  description: products
+  namespace: producinventory
+spec:
+  type: Info
+  lifecycle: production
+  owner: TDP
+  system: default/ESB-BSS
+  definition: "| \n\t\tpath: http://10.4.43.105:880/products-0.0.2/products"

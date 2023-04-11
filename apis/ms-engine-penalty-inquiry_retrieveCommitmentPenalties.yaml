@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: retrieveCommitmentPenalties
+  description: retrieveCommitmentPenalties
+  namespace: ms-engine-penalty-inquiry
+spec:
+  type: Info
+  lifecycle: production
+  owner: TDP
+  system: default/Motor-de-Ofertas
+  definition: "| \n\t\tpath: [GET] /penalties"

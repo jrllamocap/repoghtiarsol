@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: getOfferings
+  description: getOfferings
+  namespace: apim-az-productcatalogmanagement
+spec:
+  type: Info
+  lifecycle: production
+  owner: TDP
+  system: default/API-MANAGEMENT-AZURE
+  definition: "| \n\t\tpath: [GET] /offerings"
